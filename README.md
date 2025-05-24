@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 # 🌿 My Modern Blog App
 
 Welcome to **My Modern Blog App** — a stylish, intuitive, and feature-rich blogging platform built with React and Appwrite.
 
 This project was developed by **me** as part of a personal initiative to build a fully functional and beautifully designed blog system. It reflects my attention to detail, UI/UX design, and full-stack development skills.
 
----
 
 ## 🚀 Live Demo
 
 Check out the live version here 👉 [Live Blog App](https://your-live-site-url.com)
 
----
 
 ## 🧩 Features
 
@@ -33,21 +30,6 @@ Check out the live version here 👉 [Live Blog App](https://your-live-site-url.
 - **State Management**: Redux Toolkit
 - **Rich Text Editor**: Custom RTE integration
 
----
-
-## 🔧 Installation
-
-```bash
-git clone https://github.com/your-username/modern-blog-app.git
-cd modern-blog-app
-npm install
-npm run dev
-```
-=======
-# Blog App
-
-A simple blog application using React for the frontend and Appwrite as the backend.
-
 ## Installation
 
 1. Clone the repository:
@@ -67,15 +49,3 @@ A simple blog application using React for the frontend and Appwrite as the backe
    npm start
    ```
 
-## Features
-- Create, edit, and delete blog posts
-- User authentication with Appwrite
-- Responsive UI
-
-## Backend
-This project uses [Appwrite](https://appwrite.io/) for authentication and database management.
-
-## Live Demo
-[Click here to view the live demo](#)
-
->>>>>>> 3d86a8baf9b2c4f547b661909c7a58546c739b95
