@@ -7,7 +7,7 @@ This project was developed by **me** as part of a personal initiative to build a
 
 ## 🚀 Live Demo
 
-Check out the live version here 👉 [Live Blog App](https://your-live-site-url.com)
+Check out the live version here 👉 [Live Blog App](https://blog-app-m1tn.onrender.com/)
 
 
 ## 🧩 Features
