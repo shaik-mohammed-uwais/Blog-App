@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://your-frontend.onrender.com", // ← replace this with your actual frontend deployment URL
+    "https://blog-app-m1tn.onrender.com/", // ← replace this with your actual frontend deployment URL
   ],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
