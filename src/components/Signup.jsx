@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Logo, Button, Input } from "./export";
+import { Button, Input } from "./export";
 import authservices from "../appwrite/auth";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
@@ -34,17 +34,11 @@ function Signup() {
   };
 
   return (
-    <div className="w-full max-w-md bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all">
-      {/* <div className="flex justify-center mb-6">
-        <span className="inline-block w-24">
-          <Logo width="100%" />
-        </span>
-      </div> */}
-
+    <div className="w-full max-w-md bg-white/30 backdrop-blur-md rounded-2xl px-8 py-10 shadow-md hover:shadow-lg transition-all border border-white/20">
       <h2 className="text-center text-2xl font-bold text-gray-900">
         Create your account
       </h2>
-      <p className="text-center text-sm text-gray-600 mt-1">
+      <p className="text-center text-sm text-gray-700 mt-1">
         Already registered?{" "}
         <Link
           to="/login"
@@ -88,7 +82,12 @@ function Signup() {
           })}
           className={errors.password ? "border-red-500" : ""}
         />
-        <Button type="submit" className="w-full">
+        <Button
+          type="submit"
+          className="w-full px-3 py-2 text-blue-700 font-semibold bg-blue-200/40 backdrop-blur-md
+  border border-white/30 rounded-lg shadow hover:shadow-sm hover:bg-blue-300/40
+  transition duration-200"
+        >
           Sign up
         </Button>
       </form>

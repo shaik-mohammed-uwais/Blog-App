@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import authservices from "../../appwrite/auth";
 import { logout } from "../../store/authslice";
@@ -16,7 +15,9 @@ function Logout() {
   return (
     <button
       onClick={logoutHandler}
-      className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-red-700 hover:text-white hover:bg-red-600 rounded-md transition-all duration-200"
+      className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-red-700
+      rounded-md transition-all duration-200
+      hover:text-red-900 hover:bg-red-300/30 hover:backdrop-blur-md hover:shadow-sm"
     >
       <LogOut size={16} />
       Logout

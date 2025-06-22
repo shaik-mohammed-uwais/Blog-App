@@ -1,12 +1,12 @@
-import React from "react";
 import { Container, Logout } from "../export";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { PencilLine } from "lucide-react"; // updated icon
+import { PencilLine } from "lucide-react";
 
 function Header() {
   const authStatus = useSelector((state) => state.auth.status);
   const navigate = useNavigate();
+  const location = useLocation(); // ✅ Get current route
 
   const navItems = [
     { name: "Home", slug: "/", active: true },
@@ -35,7 +35,12 @@ function Header() {
                   <li key={item.name}>
                     <button
                       onClick={() => navigate(item.slug)}
-                      className="px-3 py-1.5 text-sm font-medium text-gray-700 hover:text-white hover:bg-black rounded-md transition-all duration-200"
+                      className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200
+                        ${
+                          location.pathname === item.slug
+                            ? "text-blue-900 bg-blue-200/40 backdrop-blur-md shadow-sm"
+                            : "text-gray-700 hover:text-blue-900 hover:bg-blue-200/40 hover:backdrop-blur-md hover:shadow-sm"
+                        }`}
                     >
                       {item.name}
                     </button>

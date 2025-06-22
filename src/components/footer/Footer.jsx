@@ -1,10 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { PenLine, Github, Linkedin, Code } from "lucide-react";
+import { PenLine, Code } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 py-10 mt-10">
+    <footer className="bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 py-10 ">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <Link
@@ -22,7 +22,7 @@ function Footer() {
               rel="noreferrer"
               className="transition-transform hover:scale-110 text-black dark:text-white"
             >
-              <Github size={20} />
+              <FaGithub size={20} />
             </a>
             <a
               href="https://leetcode.com/"
@@ -38,7 +38,7 @@ function Footer() {
               rel="noreferrer"
               className="transition-transform hover:scale-110 text-black dark:text-white"
             >
-              <Linkedin size={20} />
+              <FaLinkedin size={20} />
             </a>
           </div>
         </div>

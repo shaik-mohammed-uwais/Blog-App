@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { login as storeLogin } from "../store/authslice";
-import { Logo, Button, Input } from "./export";
+import { Button, Input } from "./export";
 import authservices from "../appwrite/auth";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
@@ -29,17 +29,12 @@ function Login() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-white px-4">
-      <div className="w-full max-w-md border border-gray-200 rounded-xl p-8 shadow-sm transition-all hover:shadow-md">
-        {/* <div className="flex justify-center mb-6">
-          <span className="inline-block w-24 transition-transform hover:scale-105">
-            <Logo width="100%" />
-          </span>
-        </div> */}
+      <div className="w-full max-w-md border border-white/20 bg-white/30 backdrop-blur-md rounded-2xl px-8 py-10 shadow-md hover:shadow-lg transition-all">
         <h2 className="text-center text-2xl font-bold text-gray-900">
           Welcome back
         </h2>
-        <p className="text-center text-sm text-gray-600 mt-1">
-          Don't have an account?{" "}
+        <p className="text-center text-sm text-gray-700 mt-1">
+          Don&apos;t have an account?{" "}
           <Link
             to="/signup"
             className="text-black underline underline-offset-2 hover:text-blue-600"
@@ -65,7 +60,13 @@ function Login() {
             type="password"
             {...register("password", { required: "Password is required" })}
           />
-          <Button type="submit" className="w-full">
+
+          <Button
+            type="submit"
+            className="w-full px-3 py-2 text-blue-700 font-semibold bg-blue-200/40 backdrop-blur-md
+          border border-white/30 rounded-lg shadow hover:shadow-sm hover:bg-blue-300/40
+          transition duration-200"
+          >
             Sign in
           </Button>
         </form>

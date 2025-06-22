@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import services from "../appwrite/config";
 import { Link } from "react-router-dom";
 
-function PostCard({ $id, "featured-image": featuredImage, title }) {
+function PostCard({ $id, "featured-image": featuredImage, title, status }) {
   const [imageUrl, setImageUrl] = useState(null);
 
   useEffect(() => {
@@ -33,8 +33,15 @@ function PostCard({ $id, "featured-image": featuredImage, title }) {
           </div>
         )}
 
-        <div className="absolute bottom-3 left-3 px-3 py-1 backdrop-blur-md bg-white/40 text-xs text-black font-medium rounded-md shadow-sm">
-          Blog
+        <div
+          className={`absolute bottom-3 left-3 px-3 py-1 text-xs font-medium rounded-md shadow-sm backdrop-blur-md
+    ${
+      status === "active"
+        ? "bg-green-200/40 text-white-800"
+        : "bg-red-200/40 text-white-800"
+    }`}
+        >
+          {status}
         </div>
       </div>
 

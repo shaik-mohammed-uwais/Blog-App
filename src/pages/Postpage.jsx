@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Container, Button } from "../components/export";
+import { useEffect, useState } from "react";
+import { Container } from "../components/export";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import services from "../appwrite/config";
