@@ -5,17 +5,9 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 dotenv.config();
 const app = express();
-const port = process.env.PORT || 5000;
+const port = 5000;
 
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://blog-app-m1tn.onrender.com/", // ← replace this with your actual frontend deployment URL
-  ],
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
-}));
-
+app.use(cors());
 app.use(express.json());
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_APIKEY);
@@ -47,8 +39,14 @@ Content: <your blog content here>`;
     const result = await model.generateContent(prompt);
     const response = await result.response.text();
 
-    const title = response.match(/Title:\s*(.*)/)?.[1]?.trim()?.slice(0, 50);
-    const content = response.match(/Content:\s*([\s\S]*)/)?.[1]?.trim()?.slice(0, 900);
+    const title = response
+      .match(/Title:\s*(.*)/)?.[1]
+      ?.trim()
+      ?.slice(0, 50);
+    const content = response
+      .match(/Content:\s*([\s\S]*)/)?.[1]
+      ?.trim()
+      ?.slice(0, 900);
 
     res.json({ title, content });
   } catch (error) {
@@ -58,5 +56,5 @@ Content: <your blog content here>`;
 });
 
 app.listen(port, () => {
-  console.log(`✅ Gemini-powered server running on port ${port}`);
+  console.log(`✅ Gemini-powered server running on http://localhost:${port}`);
 });
