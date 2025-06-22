@@ -83,13 +83,16 @@ function Signup() {
           className={errors.password ? "border-red-500" : ""}
         />
         <Button
-          type="submit"
-          className="w-full px-3 py-2 text-blue-700 font-semibold bg-blue-200/40 backdrop-blur-md
-  border border-white/30 rounded-lg shadow hover:shadow-sm hover:bg-blue-300/40
+  type="submit"
+  className="w-full px-3 py-2 text-blue-800 font-semibold 
+  bg-blue-300/50 backdrop-blur-md border border-white/30 
+  rounded-lg shadow hover:shadow-md hover:bg-blue-400/60 
+  active:bg-blue-500/70 active:text-white 
   transition duration-200"
-        >
-          Sign up
-        </Button>
+>
+  Sign up
+</Button>
+
       </form>
     </div>
   );
