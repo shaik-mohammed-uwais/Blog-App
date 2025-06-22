@@ -84,14 +84,14 @@ function Signup() {
         />
         <Button
   type="submit"
-  className="w-full px-3 py-2 text-blue-800 font-semibold 
-  bg-blue-300/50 backdrop-blur-md border border-white/30 
-  rounded-lg shadow hover:shadow-md hover:bg-blue-400/60 
-  active:bg-blue-500/70 active:text-white 
+  className="w-full px-3 py-2 text-blue-900 font-semibold 
+  bg-blue-300/40 backdrop-blur-md border border-white/30 
+  rounded-lg shadow-sm hover:shadow-md hover:bg-blue-400/50 
   transition duration-200"
 >
   Sign up
 </Button>
+
 
       </form>
     </div>
